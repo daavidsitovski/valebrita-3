@@ -1,0 +1,22 @@
+import tkinter as tk
+
+def abrir_carta():
+    label.config(text="Te extraño mi niña bonita")
+
+root = tk.Tk()
+root.title("Carta de Amor")
+root.geometry("300x200")
+
+# Configuración de la carta
+carta = tk.Frame(root, bg="pink", width=300, height=200)
+carta.pack_propagate(False)
+
+# Contenido de la carta
+label = tk.Label(carta, text="", font=("Arial", 12), bg="pink")
+label.pack(expand=True)
+
+# Botón para abrir la carta
+boton_abrir = tk.Button(root, text="Abrir Carta", command=abrir_carta)
+boton_abrir.pack()
+
+root.mainloop()
